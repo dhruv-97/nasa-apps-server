@@ -5,6 +5,14 @@ var soilSchema = new Schema({
 	value:{
 		type: Number,
 		default:0
+	},
+	light:{
+		type: Number,
+		default: 4
+	},
+	motor:{
+		type: Boolean,
+		default: false
 	}
 }, {
     timestamps: true

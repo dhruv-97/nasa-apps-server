@@ -9,7 +9,6 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 var config = require('./config');
-
 mongoose.connect(config.mongoUrl);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
