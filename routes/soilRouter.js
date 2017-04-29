@@ -23,6 +23,19 @@ soilRouter.route('/activate')
             if (err) next(err);
             console.log(soil);
         });
+	res.send("Done");
+});
+soilRouter.route('/deactivate')
+.get(function (req, res, next) {
+	soils.findByIdAndUpdate("59048721da861c6a2d94f237", {
+        $set: {"motor":false}
+        }, {
+            new: true
+        }, function (err, soil) {
+            if (err) next(err);
+            console.log(soil);
+        });
+	res.send("Done");
 });
 
 module.exports=soilRouter;
